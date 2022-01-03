@@ -1,0 +1,7 @@
+name: lando-elasticsearch-7
+services:
+  defaults:
+    type: elasticsearch:7
+  patch:
+    type: elasticsearch:7.16.2
+

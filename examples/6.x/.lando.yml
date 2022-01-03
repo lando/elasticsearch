@@ -1,0 +1,8 @@
+name: lando-elasticsearch-6
+services:
+  defaults:
+    type: elasticsearch:6
+  patch:
+    type: elasticsearch:6.8.22
+
+

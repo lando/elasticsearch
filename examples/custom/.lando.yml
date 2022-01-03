@@ -1,0 +1,11 @@
+name: lando-elasticsearch-custom
+services:
+  custom:
+    type: elasticsearch:7
+    portforward: true
+    mem: 1026m
+    plugins:
+      - analysis-icu
+    config:
+      server: config/custom.yml
+
