@@ -14,7 +14,7 @@ with this example.
 ```bash
 # Should start up successfully
 lando poweroff
-lando start
+lando start -vvvv
 ```
 
 Verification commands
