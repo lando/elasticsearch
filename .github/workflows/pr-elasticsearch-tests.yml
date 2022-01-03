@@ -11,10 +11,10 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          # - examples/5.x
-          # - examples/6.x
+          - examples/5.x
+          - examples/6.x
           - examples/7.x
-          # - examples/custom
+          - examples/custom
         lando-versions:
           - edge
         os:
