@@ -36,8 +36,9 @@ module.exports = {
     version: '6',
     supported: supportedVersions,
     pinPairs: {
-      '7': 'bitnami/elasticsearch:7.6.1-debian-10-r15',
-      '6': 'bitnami/elasticsearch:6.8.7-debian-10-r15',
+      '7': 'bitnami/elasticsearch:7.10.2-debian-10-r322',
+      '6': 'bitnami/elasticsearch:6.8.22-debian-10-r14',
+      '5': 'bitnami/elasticsearch:5.6.16-debian-9-r3',
     },
     patchesSupported: true,
     confSrc: __dirname,
