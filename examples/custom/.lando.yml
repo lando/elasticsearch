@@ -1,4 +1,4 @@
-name: lando-elasticsearch-custom
+name: lando-elasticsearch
 services:
   custom:
     type: elasticsearch:7
