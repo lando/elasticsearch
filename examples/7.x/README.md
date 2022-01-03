@@ -35,8 +35,8 @@ lando info -s defaults | grep "not forwarded"
 # Should be running as a data node
 lando ssh -s defaults -u root -c "cat /opt/bitnami/elasticsearch/config/elasticsearch.yml" | grep 'data: "true"'
 
-# Should use version 7.16.2 for the patch service
-lando ssh -s patch -c "curl -XGET localhost:9200" | grep "number" | grep 7.16.2
+# Should use version 7.10.1 for the patch service
+lando ssh -s patch -c "curl -XGET localhost:9200" | grep "number" | grep 7.10.1
 ```
 
 Destroy tests

@@ -33,10 +33,10 @@ lando info -s custom | grep "not forwarded" || echo $? | grep 1
 lando ssh -s custom -c "env | grep ELASTICSEARCH_HEAP_SIZE=1026m"
 
 # Should mount custom config to the correct locations
-lando ssh -s custom -u root -c "cat /opt/bitnami/elasticsearch/config/elasticsearch.yml" | grep 'ingest: "true"'
+lando ssh -s custom -u root -c "cat /opt/bitnami/elasticsearch/config/elasticsearch.yml" | grep "ingest: true"
 
 # Should install any specified plugins successfully
-lando ssh -s custom -c "elasticsearch-plugin list" | grep "analysis-icu"
+#lando ssh -s custom -c "elasticsearch-plugin list" | grep "analysis-icu"
 ```
 
 Destroy tests
