@@ -9,3 +9,7 @@ services:
     config:
       server: config/custom.yml
 
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/elasticsearch": ./../../
