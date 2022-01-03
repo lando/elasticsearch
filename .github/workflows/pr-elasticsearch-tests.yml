@@ -11,10 +11,10 @@ jobs:
     strategy:
       matrix:
         leia-tests:
-          - examples/5.x
-          - examples/6.x
+          # - examples/5.x
+          # - examples/6.x
           - examples/7.x
-          - examples/custom
+          # - examples/custom
         lando-versions:
           - edge
         os:
@@ -58,10 +58,6 @@ jobs:
           cp -f actions-lando-config.yml ~/.lando/config.yml
           echo false > ~/.lando/cache/report_errors
           lando --clear
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
       - name: Verify Lando works and we are dogfooding this plugin for tests
         run: |
           lando version
