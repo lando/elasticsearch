@@ -3,7 +3,7 @@ services:
   defaults:
     type: elasticsearch:6
   patch:
-    type: elasticsearch:6.8.22
+    type: elasticsearch:6.8.21
 
 # This is important because it lets lando know to test against the plugin in this repo
 # DO NOT REMOVE THIS!
