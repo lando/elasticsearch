@@ -39,7 +39,7 @@ jobs:
         id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ matrix.node-version }}v2-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-yarn-${{ matrix.node-version }}-v2-${{ hashFiles('**/yarn.lock') }}
       - name: Install Yarn dependencies
         run: yarn install --prefer-offline --frozen-lockfile
 
@@ -61,7 +61,6 @@ jobs:
       - name: Verify Lando works and we are dogfooding this plugin for tests
         run: |
           lando version
-          lando config | grep "disablePlugins" 
           lando config --path plugins | grep elasticsearch | grep /home/runner/work/elasticsearch/elasticsearch || echo "::error:: Not dogfooding this plugin correctly! "
 
       # This block should eventually become use lando/actions-leia@v2
