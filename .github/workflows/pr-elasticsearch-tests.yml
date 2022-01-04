@@ -61,6 +61,7 @@ jobs:
       - name: Verify Lando works and we are dogfooding this plugin for tests
         run: |
           lando version
+          lando config | grep "disablePlugins" 
           lando config --path plugins | grep elasticsearch | grep /home/runner/work/elasticsearch/elasticsearch || echo "::error:: Not dogfooding this plugin correctly! "
 
       # This block should eventually become use lando/actions-leia@v2
