@@ -77,8 +77,6 @@ services:
 
 You can get connection and credential information about your elasticsearch instance by running [`lando info`](https://docs.lando.dev/cli/info.html). It may also be worth checking out our [accessing services externally guide](https://docs.lando.dev/guides/external-access.html).
 
-<RelatedGuides tag="Elasticsearch"/>
-
 ## Adding Kibana for Elasticsearch
 
 If you want to add a Kibana service for your Elasticsearch, you can easily use a [custom compose service](https://docs.lando.dev/compose.html).
