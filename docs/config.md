@@ -79,7 +79,7 @@ You can get connection and credential information about your elasticsearch insta
 
 ## Adding Kibana for Elasticsearch
 
-If you want to add a Kibana service for your Elasticsearch, you can easily use a [custom compose service](https://docs.lando.dev/compose.html).
+If you want to add a Kibana service for your Elasticsearch, you can easily use a [custom compose service](https://docs.lando.dev/compose).
 The version of Kibana should match your version of Elasticsearch!
 
 ```yaml
