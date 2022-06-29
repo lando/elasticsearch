@@ -5,7 +5,11 @@ const _ = require('lodash');
 
 // Supported versions
 const supportedVersions = [
+  '8',
+  '8.2.x',
+  '8.1.x',
   '7',
+  '7.17.x',
   '7.16.x',
   '7.15.x',
   '7.14.x',
