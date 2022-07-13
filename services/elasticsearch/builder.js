@@ -5,7 +5,11 @@ const _ = require('lodash');
 
 // Supported versions
 const supportedVersions = [
+  '8',
+  '8.2.x',
+  '8.1.x',
   '7',
+  '7.17.x',
   '7.16.x',
   '7.15.x',
   '7.14.x',
@@ -36,6 +40,7 @@ module.exports = {
     version: '6',
     supported: supportedVersions,
     pinPairs: {
+      '8': 'bitnami/elasticsearch:8.2.3-debian-11-r4',
       '7': 'bitnami/elasticsearch:7.10.2-debian-10-r322',
       '6': 'bitnami/elasticsearch:6.8.22-debian-10-r14',
       '5': 'bitnami/elasticsearch:5.6.16-debian-9-r3',

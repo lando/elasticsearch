@@ -1,9 +1,9 @@
-name: lando-elasticsearch-7
+name: lando-elasticsearch-8
 services:
   defaults:
-    type: elasticsearch:7
+    type: elasticsearch:8
   patch:
-    type: elasticsearch:7.17.5
+    type: elasticsearch:8.2.3
 
 # This is important because it lets lando know to test against the plugin in this repo
 # DO NOT REMOVE THIS!

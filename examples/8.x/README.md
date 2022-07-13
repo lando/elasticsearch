@@ -23,8 +23,8 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use version 7.10.2 for the default version
-lando ssh -s defaults -c "curl -XGET localhost:9200" | grep "number" | grep "7.10.2"
+# Should use version 8.2.3 for the default version
+lando ssh -s defaults -c "curl -XGET localhost:9200" | grep "number" | grep "8.2.3"
 
 # Should use 1025m as the default heap size
 lando ssh -s defaults -c "env | grep ELASTICSEARCH_HEAP_SIZE=1025m"
@@ -35,8 +35,8 @@ lando info -s defaults | grep "not forwarded"
 # Should be running as a data node
 lando ssh -s defaults -u root -c "cat /opt/bitnami/elasticsearch/config/elasticsearch.yml" | grep 'data: "true"'
 
-# Should use version 7.17.5 for the patch service
-lando ssh -s patch -c "curl -XGET localhost:9200" | grep "number" | grep 7.17.5
+# Should use version 8.2.3 for the patch service
+lando ssh -s patch -c "curl -XGET localhost:9200" | grep "number" | grep 8.2.3
 ```
 
 Destroy tests

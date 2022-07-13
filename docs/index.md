@@ -18,7 +18,11 @@ services:
 
 ## Supported versions
 
+*   [8](https://hub.docker.com/r/bitnami/elasticsearch)
+*   [8.2.x](https://hub.docker.com/r/bitnami/elasticsearch)
+*   [8.1.x](https://hub.docker.com/r/bitnami/elasticsearch)
 *   [7](https://hub.docker.com/r/bitnami/elasticsearch)
+*   [7.17.x](https://hub.docker.com/r/bitnami/elasticsearch)
 *   [7.16.x](https://hub.docker.com/r/bitnami/elasticsearch)
 *   [7.15.x](https://hub.docker.com/r/bitnami/elasticsearch)
 *   [7.14.x](https://hub.docker.com/r/bitnami/elasticsearch)
