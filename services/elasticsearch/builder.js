@@ -40,10 +40,10 @@ module.exports = {
     version: '6',
     supported: supportedVersions,
     pinPairs: {
-      '8': 'bitnami/elasticsearch:8.2.3-debian-11-r4',
-      '7': 'bitnami/elasticsearch:7.10.2-debian-10-r322',
-      '6': 'bitnami/elasticsearch:6.8.22-debian-10-r14',
-      '5': 'bitnami/elasticsearch:5.6.16-debian-9-r3',
+      '8': 'elasticsearch:8.7.0',
+      '7': 'elasticsearch:7.17.9',
+      '6': 'elasticsearch:6.8.23',
+      '5': 'elasticsearch:5.6.16', //No ARM versions available
     },
     patchesSupported: true,
     confSrc: __dirname,
@@ -52,7 +52,7 @@ module.exports = {
     port: '9200',
     mem: '1025m',
     remoteFiles: {
-      server: '/opt/bitnami/elasticsearch/config/elasticsearch.yml',
+      server: '/usr/share/elasticsearch/config/elasticsearch.yml',
     },
   },
   parent: '_service',
@@ -60,20 +60,22 @@ module.exports = {
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
       const elasticsearch = {
-        image: `bitnami/elasticsearch:${options.version}`,
+        image: `elasticsearch:${options.version}`,
         command: '/launch.sh',
         environment: {
           ELASTICSEARCH_IS_DEDICATED_NODE: 'no',
-          ELASTICSEARCH_CLUSTER_NAME: 'bespin',
-          ELASTICSEARCH_NODE_NAME: 'lando',
-          ELASTICSEARCH_PORT_NUMBER: 9200,
+          'cluster.name': 'bespin',
+          'node.name': 'lando',
+          'discovery.type': 'single-node',
+          'http.port': '9200',
           ELASTICSEARCH_PLUGINS: options.plugins.join(';'),
           ELASTICSEARCH_HEAP_SIZE: options.mem,
+          ELASTICSEARCH_PLUGINS_DIR: '/usr/share/elasticsearch/plugins',
           LANDO_NEEDS_EXEC: 'DOEEET',
         },
         volumes: [
+          `${options.data}:/usr/share/elasticsearch/data`,
           `${options.confDest}/launch.sh:/launch.sh`,
-          `${options.data}:/bitnami/elasticsearch/data`,
         ],
       };
       // Add some info

@@ -1,7 +1,7 @@
 http:
   port: 9200
 path:
-  data: /bitnami/elasticsearch/data
+  data: /usr/share/elasticsearch/data
 transport:
   tcp:
     port: 9300
