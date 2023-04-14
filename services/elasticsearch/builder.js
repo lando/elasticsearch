@@ -43,7 +43,7 @@ module.exports = {
       '8': 'elasticsearch:8.7.0',
       '7': 'elasticsearch:7.17.9',
       '6': 'elasticsearch:6.8.23',
-      '5': 'elasticsearch:5.6.16', //No ARM versions available
+      '5': 'elasticsearch:5.6.16', // No ARM versions available
     },
     patchesSupported: true,
     confSrc: __dirname,
@@ -63,15 +63,15 @@ module.exports = {
         image: `elasticsearch:${options.version}`,
         command: '/launch.sh',
         environment: {
-          ELASTICSEARCH_IS_DEDICATED_NODE: 'no',
+          'ELASTICSEARCH_IS_DEDICATED_NODE': 'no',
           'cluster.name': 'bespin',
           'node.name': 'lando',
           'discovery.type': 'single-node',
           'http.port': '9200',
-          ELASTICSEARCH_PLUGINS: options.plugins.join(';'),
-          ELASTICSEARCH_HEAP_SIZE: options.mem,
-          ELASTICSEARCH_PLUGINS_DIR: '/usr/share/elasticsearch/plugins',
-          LANDO_NEEDS_EXEC: 'DOEEET',
+          'ELASTICSEARCH_PLUGINS': options.plugins.join(';'),
+          'ELASTICSEARCH_HEAP_SIZE': options.mem,
+          'ELASTICSEARCH_PLUGINS_DIR': '/usr/share/elasticsearch/plugins',
+          'LANDO_NEEDS_EXEC': 'DOEEET',
         },
         volumes: [
           `${options.data}:/usr/share/elasticsearch/data`,
