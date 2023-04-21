@@ -47,7 +47,7 @@ module.exports = {
     },
     patchesSupported: true,
     confSrc: __dirname,
-    healthcheck: 'curl -XGET localhost:9200',
+    healthcheck: 'curl -XGET http://localhost:9200',
     plugins: [],
     port: '9200',
     mem: '1025m',
