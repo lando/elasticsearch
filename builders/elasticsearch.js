@@ -1,6 +1,7 @@
 'use strict';
 
 // Modules
+const path = require('path');
 const _ = require('lodash');
 
 // Supported versions
@@ -46,7 +47,7 @@ module.exports = {
       '5': 'bitnami/elasticsearch:5.6.16-debian-9-r3',
     },
     patchesSupported: true,
-    confSrc: __dirname,
+    confSrc: path.resolve(__dirname, '..', 'config'),
     healthcheck: 'curl -XGET localhost:9200',
     plugins: [],
     port: '9200',

@@ -24,26 +24,29 @@ jobs:
           - '18'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install node ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org
           cache: npm
-      - name: Install NPM dependencies
+      - name: Install dependencies
         run: npm clean-install --prefer-offline --frozen-lockfile
+      - name: Bundle Deps
+        uses: lando/prepare-release-action@v3
+        with:
+          lando-plugin: true
+          version: dev
+          sync: false
       - name: Setup lando ${{ matrix.lando-version }}
         uses: lando/setup-lando@v2
         with:
           lando-version: ${{ matrix.lando-version }}
           config: |
-            plugins.@lando/elasticsearch=/home/runner/work/elasticsearch/elasticsearch
+            setup.skipCommonPlugins=true
+            setup.plugins.@lando/elasticsearch=/home/runner/work/elasticsearch/elasticsearch
           telemetry: false
-      - name: Verify Lando works and we are dogfooding this plugin for tests
-        run: |
-          lando version
-          lando config --path plugins | grep elasticsearch | grep /home/runner/work/elasticsearch/elasticsearch || (echo "::error:: Not dogfooding this plugin correctly! " && exit 1)
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2
         with:
