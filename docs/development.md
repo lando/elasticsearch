@@ -5,7 +5,7 @@ description: Learn how to develop and contribute to the Lando Elasticsearch serv
 
 # Development
 
-This guide contains information to help onboard developers to work on the [elasticsearch](https://elasticsearch.microsoft.com/en-us/) integration, hereafter referred to as *the plugin*.
+This guide contains information to help onboard developers to work on the [elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) integration, hereafter referred to as *the plugin*.
 
 ## Requirements
 
@@ -138,8 +138,8 @@ jobs:
       fail-fast: false
       matrix:
         leia-test:
-          - examples/2.1
-          - examples/2.2
+          - examples/8.x
+          - examples/9.x
 
 ```
 
