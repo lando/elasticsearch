@@ -8,7 +8,7 @@ next: ./config.html
 
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search and analytics engine, commonly used as a substitute for Solr or for collecting log and metrics data.
 
-You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/lando-service.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
+You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/services/lando.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
 
 ```yaml
 services:
@@ -43,7 +43,7 @@ services:
 *   [6.6.x](https://hub.docker.com/r/bitnami/elasticsearch)
 *   [6.5.x](https://hub.docker.com/r/bitnami/elasticsearch)
 *   [5](https://hub.docker.com/r/bitnami/elasticsearch)
-*   [custom](https://docs.lando.dev/core/v3/lando-service.html#overrides)
+*   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
 
 ## Patch versions
 
