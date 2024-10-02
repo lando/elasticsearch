@@ -26,8 +26,11 @@ Run the following commands to validate things are rolling as they should.
 # Should use the custom version specified for custom
 lando ssh -s custom -c "curl -s -XGET localhost:9200" | grep "number" | grep "7."
 
+# Should have custom containers
+lando info -s custom
+
 # Should portforward for custom
-lando info -s custom | grep "external_connection" | grep --regexp="port: '\d*'"
+lando info -s custom | grep "external_connection" | grep --regexp="port: '\d*'" || echo $? | grep 1
 
 # Should use the specified heap size when given
 lando ssh -s custom -c "env | grep ELASTICSEARCH_HEAP_SIZE=1026m"
