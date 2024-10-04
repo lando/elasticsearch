@@ -1,7 +1,5 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-## v1.2.0 - [October 3, 2024](https://github.com/lando/elasticsearch/releases/tag/v1.2.0)
-
 * Updated ES versions 6, 7, and 8 to the latest supported tags
 * Added ES 8.3-8.15 to the supported version matrix
 * Corrected some ES configuration tests
