@@ -2,7 +2,7 @@ name: lando-elasticsearch
 services:
   custom:
     type: elasticsearch:7
-    portforward: true
+    portforward: 4547
     mem: 1026m
     plugins:
       - analysis-icu
