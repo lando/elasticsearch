@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+  * Updated lando/php to v1.4.0.
+
 ## v1.2.0 - [October 9, 2024](https://github.com/lando/elasticsearch/releases/tag/v1.2.0)
 
 * Updated ES versions 6, 7, and 8 to the latest supported tags
