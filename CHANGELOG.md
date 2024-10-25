@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.3.0 - [October 25, 2024](https://github.com/lando/elasticsearch/releases/tag/v1.3.0)
+
 * Updated release process to generate an edge release when stable releases are created.
 
 ## v1.2.0 - [October 9, 2024](https://github.com/lando/elasticsearch/releases/tag/v1.2.0)
