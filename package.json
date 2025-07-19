@@ -3,7 +3,7 @@
   "description": "A Lando plugin that provides a tight integration with Elasticsearch.",
   "version": "1.3.3",
   "author": "Mike Pirog @pirog",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": "lando/elasticsearch",
   "bugs": "https://github.com/lando/elasticsearch/issues/new/choose",
   "homepage": "https://github.com/lando/elasticsearch",
