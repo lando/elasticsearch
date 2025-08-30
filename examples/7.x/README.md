@@ -23,8 +23,8 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use version 7.17.24 for the default version
-lando ssh -s defaults -c "curl -s -XGET localhost:9200" | grep "number" | grep "7.17.24"
+# Should use version 7.17.26 for the default version
+lando ssh -s defaults -c "curl -s -XGET localhost:9200" | grep "number" | grep "7.17.26"
 
 # Should use 1025m as the default heap size
 lando ssh -s defaults -c "env | grep ELASTICSEARCH_HEAP_SIZE=1025m"
