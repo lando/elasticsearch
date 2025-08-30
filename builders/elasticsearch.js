@@ -7,6 +7,9 @@ const _ = require('lodash');
 // Supported versions
 const supportedVersions = [
   '8',
+  '8.18.x',
+  '8.17.x',
+  '8.16.x',
   '8.15.x',
   '8.14.x',
   '8.13.x',
@@ -54,10 +57,10 @@ module.exports = {
     version: '6',
     supported: supportedVersions,
     pinPairs: {
-      '8': 'bitnami/elasticsearch:8.15.2-debian-12-r0',
-      '7': 'bitnami/elasticsearch:7.17.24-debian-12-r0',
-      '6': 'bitnami/elasticsearch:6.8.23-debian-10-r77',
-      '5': 'bitnami/elasticsearch:5.6.16-debian-9-r3',
+      '8': 'bitnamilegacy/elasticsearch:8.18.0-debian-12-r2',
+      '7': 'bitnamilegacy/elasticsearch:7.17.26-debian-12-r0',
+      '6': 'bitnamilegacy/elasticsearch:6.8.23',
+      '5': 'bitnamilegacy/elasticsearch:5.6.16-r3',
     },
     patchesSupported: true,
     confSrc: path.resolve(__dirname, '..', 'config'),
@@ -74,7 +77,7 @@ module.exports = {
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
       const elasticsearch = {
-        image: `bitnami/elasticsearch:${options.version}`,
+        image: `bitnamilegacy/elasticsearch:${options.version}`,
         command: '/launch.sh',
         environment: {
           ELASTICSEARCH_IS_DEDICATED_NODE: 'no',

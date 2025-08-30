@@ -87,6 +87,6 @@ services:
   kibana:
     type: compose
     services:
-      image: bitnami/kibana:6.8.23
+      image: bitnamilegacy/kibana:9.1.2-debian-12-r0
       command: '/opt/bitnami/scripts/kibana/entrypoint.sh /opt/bitnami/scripts/kibana/run.sh'
 ```
