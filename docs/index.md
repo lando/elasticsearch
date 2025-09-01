@@ -1,19 +1,18 @@
 ---
 title: Elasticsearch Lando Plugin
 description: Add a highly configurable Elasticsearch service to Lando for local development with all the power of Docker and Docker Compose.
-next: ./config.html
 ---
 
 # Elasticsearch
 
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search and analytics engine, commonly used as a substitute for Solr or for collecting log and metrics data.
 
-You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/services/lando.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
+You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/services/lando-3.html) top-level config in your [Landofile](https://docs.lando.dev/landofile).
 
 ```yaml
 services:
   myservice:
-    type: elasticsearch
+    type: elasticsearch:8
 ```
 
 ## Supported versions
@@ -53,13 +52,13 @@ services:
 *   [7.5.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=7.5.)
 *   [7.4.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=7.4.)
 *   [7.3.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=7.3.)
-*   **[6](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=6.)** **(default)**
+*   [6](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=6.)
 *   [6.8.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=6.8.)
 *   [6.7.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=6.7.)
 *   [6.6.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=6.6.)
 *   [6.5.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=6.5.)
 *   [5](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=5.)
-*   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
+*   [custom](https://docs.lando.dev/services/lando-3.html#overrides)
 
 ## Patch versions
 

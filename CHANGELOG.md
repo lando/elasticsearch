@@ -1,10 +1,8 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-## v1.4.0 - [August 29, 2025](https://github.com/lando/elasticsearch/releases/tag/v1.4.0)
-
-* Migrated packages to use the Bitnamilegacy repository
-* Minor updates to use any new tags and release builds
-* Add ES 8.16-8.18
+* Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
+* Updated `elasticsearch:8` to `8.18.0`
+* Updated `elasticsearch:7` to `7.17.26`
 
 ## v1.3.3 - [December 6, 2024](https://github.com/lando/elasticsearch/releases/tag/v1.3.3)
 
