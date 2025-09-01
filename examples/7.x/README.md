@@ -21,7 +21,7 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should use version 7.17.26 for the default version
-lando exec defaults -- curl -s -XGET localhost:9200 | grep "number" | grep "7.17.26"
+lando exec defaults -- curl -s -XGET localhost:9200 | grep "number" | grep 7.17.26
 
 # Should use 1025m as the default heap size
 lando exec defaults -- env | grep ELASTICSEARCH_HEAP_SIZE=1025m
@@ -33,7 +33,7 @@ lando info -s defaults | grep "not forwarded"
 lando exec defaults -u root -- cat /opt/bitnami/elasticsearch/config/elasticsearch.yml | grep 'name: bespin'
 
 # Should use version 7.17.5 for the patch service
-lando exec patch -- curl -s -XGET localhost:9200" | grep "number" | grep 7.17.5
+lando exec patch -- curl -s -XGET localhost:9200 | grep "number" | grep 7.17.5
 ```
 
 ## Destroy tests

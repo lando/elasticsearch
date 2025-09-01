@@ -20,8 +20,8 @@ lando start
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use version 5.x for the default version
-lando exec defaults -- curl -XGET localhost:9200 | grep "number" | grep "5."
+# Should use version 5.6.16 for the default version
+lando exec defaults -- curl -XGET localhost:9200 | grep "number" | grep 5.6.16
 
 # Should use 1025m as the default heap size
 lando exec defaults -- env | grep ELASTICSEARCH_HEAP_SIZE=1025m
@@ -33,7 +33,7 @@ lando info -s defaults | grep "not forwarded"
 lando exec defaults -u root -- cat /opt/bitnami/elasticsearch/config/elasticsearch.yml | grep "data: true"
 
 # Should use version 5.6.15 for the patch service
-lando exec patch -- curl -XGET localhost:9200" | grep "number" | grep 5.6.15
+lando exec patch -- curl -XGET localhost:9200 | grep "number" | grep 5.6.15
 ```
 
 ## Destroy tests

@@ -33,7 +33,7 @@ lando exec custom -- env | grep ELASTICSEARCH_HEAP_SIZE=1026m
 lando exec custom -u root -- cat /opt/bitnami/elasticsearch/config/elasticsearch.yml | grep "name: bespincustom"
 
 # Should install any specified plugins successfully
-lando exec custom -- elasticsearch-plugin list" | grep "analysis-icu"
+lando exec custom -- elasticsearch-plugin list | grep "analysis-icu"
 ```
 
 ## Destroy tests
