@@ -1,12 +1,10 @@
-Elasticsearch Example
-=====================
+# Elasticsearch Custom Example
 
 This example exists primarily to test the following documentation:
 
-* [Elasticsearch Service](https://docs.devwithlando.io/tutorials/elasticsearch.html)
+* [Elasticsearch Service](https://docs.lando.dev/plugins/elasticsearch)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running
 with this example.
@@ -17,30 +15,28 @@ lando poweroff
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should use the custom version specified for custom
-lando ssh -s custom -c "curl -s -XGET localhost:9200" | grep "number" | grep "7."
+lando exec custom -- curl -s -XGET localhost:9200 | grep "number" | grep "7."
 
 # Should portforward for custom
 lando info -s custom | grep "external_connection" | grep "4547"
 
 # Should use the specified heap size when given
-lando ssh -s custom -c "env | grep ELASTICSEARCH_HEAP_SIZE=1026m"
+lando exec custom -- env | grep ELASTICSEARCH_HEAP_SIZE=1026m
 
 # Should mount custom config to the correct locations
-lando ssh -s custom -u root -c "cat /opt/bitnami/elasticsearch/config/elasticsearch.yml" | grep "name: bespincustom"
+lando exec custom -u root -- cat /opt/bitnami/elasticsearch/config/elasticsearch.yml | grep "name: bespincustom"
 
 # Should install any specified plugins successfully
-lando ssh -s custom -c "elasticsearch-plugin list" | grep "analysis-icu"
+lando exec custom -- elasticsearch-plugin list" | grep "analysis-icu"
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 
