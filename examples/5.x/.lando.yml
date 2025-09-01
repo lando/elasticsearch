@@ -9,4 +9,3 @@ services:
 # DO NOT REMOVE THIS!
 plugins:
   "@lando/elasticsearch": ../..
-
