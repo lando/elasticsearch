@@ -16,6 +16,7 @@ jobs:
           - examples/6.x
           - examples/7.x
           - examples/8.x
+          - examples/9.x
           - examples/custom
         lando-version:
           - 3-edge
