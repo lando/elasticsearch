@@ -17,6 +17,9 @@ services:
 
 ## Supported versions
 
+*   [9](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=9.)
+*   [9.1.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=9.1.)
+*   [9.0.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=9.0.)
 *   [8](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=8.)
 *   [8.18.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=8.18.)
 *   [8.17.x](https://hub.docker.com/r/bitnamilegacy/elasticsearch/tags?name=8.17.)
