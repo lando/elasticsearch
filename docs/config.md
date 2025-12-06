@@ -12,7 +12,7 @@ Also note that options, in addition to the [build steps](https://docs.lando.dev/
 ```yaml
 services:
   myservice:
-    type: elasticsearch:8
+    type: elasticsearch:9
     portforward: false
     mem: 1025m
     plugins: []
@@ -33,7 +33,7 @@ services:
 ```yaml
 services:
   myservice:
-    type: elasticsearch:8
+    type: elasticsearch:9
     portforward: true
 ```
 
@@ -42,7 +42,7 @@ services:
 ```yaml
 services:
   myservice:
-    type: elasticsearch:8
+    type: elasticsearch:9
     portforward: 9200
 ```
 
@@ -68,7 +68,7 @@ Note that you can put your configuration files anywhere inside your application 
 ```yaml
 services:
   myservice:
-    type: elasticsearch:8
+    type: elasticsearch:9
     config:
       server: config/elasticsearch.yml
 ```
