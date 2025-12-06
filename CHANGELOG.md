@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.5.0 - [December 6, 2025](https://github.com/lando/elasticsearch/releases/tag/v1.5.0)
+
 * Added support for Elasticsearch 9
 
 ## v1.4.0 - [September 1, 2025](https://github.com/lando/elasticsearch/releases/tag/v1.4.0)
