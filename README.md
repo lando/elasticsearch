@@ -13,7 +13,7 @@ Add a `elasticsearch` service to your Landofile
 ```yaml
 services:
   myservice:
-    type: elasticsearch
+    type: elasticsearch:9
 ```
 
 For more info you should check out the [docs](https://docs.lando.dev/elasticsearch):

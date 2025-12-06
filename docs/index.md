@@ -12,7 +12,7 @@ You can easily add it to your Lando app by adding an entry to the [services](htt
 ```yaml
 services:
   myservice:
-    type: elasticsearch:8
+    type: elasticsearch:9
 ```
 
 ## Supported versions
