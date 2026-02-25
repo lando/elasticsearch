@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Updated to [@lando/argv@v1.2.0](https://github.com/lando/argv/releases/tag/v1.2.0).
+
 ## v1.5.0 - [December 6, 2025](https://github.com/lando/elasticsearch/releases/tag/v1.5.0)
 
 * Added support for Elasticsearch 9
