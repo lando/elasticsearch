@@ -50,6 +50,8 @@ jobs:
             setup.skipCommonPlugins=true
             setup.plugins.@lando/elasticsearch=/home/runner/work/elasticsearch/elasticsearch
           telemetry: false
+      - name: Configure Elasticsearch sysctl
+        run: sudo sysctl -w vm.max_map_count=262144
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2
         with:
