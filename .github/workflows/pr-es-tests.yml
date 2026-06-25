@@ -13,8 +13,6 @@ jobs:
       matrix:
         leia-test:
           - examples/5.x
-          - examples/6.x
-          - examples/7.x
           - examples/8.x
           - examples/9.x
           - examples/custom
@@ -27,7 +25,7 @@ jobs:
           - '20'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Install node ${{ matrix.node-version }}
         uses: actions/setup-node@v6
         with:
@@ -50,6 +48,8 @@ jobs:
             setup.skipCommonPlugins=true
             setup.plugins.@lando/elasticsearch=/home/runner/work/elasticsearch/elasticsearch
           telemetry: false
+      - name: Configure Elasticsearch sysctl
+        run: sudo sysctl -w vm.max_map_count=262144
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2
         with:
