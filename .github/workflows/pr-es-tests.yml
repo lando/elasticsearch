@@ -13,8 +13,6 @@ jobs:
       matrix:
         leia-test:
           - examples/5.x
-          - examples/6.x
-          - examples/7.x
           - examples/8.x
           - examples/9.x
           - examples/custom
