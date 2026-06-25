@@ -19,7 +19,7 @@ At the very least you will need to have the following installed:
 
 ```sh
 # Clone this repo
-git clone https://github.com/lando/elasticsearch.git && cd elasticsearch
+git clone https://github.com/lando/elasticsearch && cd elasticsearch
 
 # Install deps
 npm install
